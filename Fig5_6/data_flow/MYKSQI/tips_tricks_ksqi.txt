@@ -1,0 +1,5 @@
+test the models: python main.py --set DATASET WaterlooSQoE-IV INPUT_DIR data/WaterlooSQoE-IV MODEL FTW:Mok2011QoE:Liu2012QoE:Xue2014QoE:Yin2015QoE:Spiteri2016QoE:Bentaleb2016QoE:SQI:P1203:VideoATLAS:KSQI
+train the models: change config file (remove waterloo1 e 2 from training dataset)
+parameters are saved into txt files in models folder
+for test on your dataset just use the same format but change the mos value with the one of each user and follow the folders that I already created for the users
+diobuono modificare anche i file che calcolano pearson kendall and san...
