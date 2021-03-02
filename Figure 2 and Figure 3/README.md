@@ -1,7 +1,7 @@
 ## Description
 `data_flow` folder is composed by:
 
- * MYKSQI folder: python [code] (https://github.com/zduanmu/ksqi), with minimum modification in order to be runned in my set-up, that let you train and test various QoE models as described in the paper.
+ * MYKSQI folder: python [code](https://github.com/zduanmu/ksqi), with minimum modification in order to be runned in my set-up, that let you train and test various QoE models as described in the paper.
 
  * data folder: contains data processed through all the pipeline, results and plots 
 
