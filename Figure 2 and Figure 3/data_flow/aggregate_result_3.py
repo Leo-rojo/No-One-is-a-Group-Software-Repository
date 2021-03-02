@@ -5,10 +5,11 @@ import glob
 import csv
 from shutil import copyfile
 
-datain='C:\\Users\\leona\\Desktop\\no-one-is-a-group\\Fig5_6\\data_flow\\data\\resultsmixture\\'
+datain='C:\\Users\\leona\\Desktop\\No-One-is-a-Group-Software-Repository\\Figure 2 and Figure 3\\data_flow\\data\\resultsmixture\\'
 
 #convert csv files to xlsx files
 os.chdir(datain)
+print(os.getcwd())
 FileList = glob.glob('*.csv')
 
 for file in FileList:
@@ -22,7 +23,6 @@ for file in FileList:
 
     wb.save(file+'.xlsx')
 
-
 # merge userresults into same file
 FileList = glob.glob('*.xlsx')
 offj=0
@@ -31,7 +31,7 @@ for file in FileList:
     ws1 = wb1.worksheets[0]
 
     # opening the destination excel file
-    filename1 = "C:\\Users\\leona\\Desktop\\no-one-is-a-group\\Fig5_6\\data_flow\\data\\final_results.xlsx"
+    filename1 = "C:\\Users\\leona\\Desktop\\No-One-is-a-Group-Software-Repository\\Figure 2 and Figure 3\\data_flow\\data\\final_results.xlsx"
     wb2 = xl.load_workbook(filename1)
     ws2 = wb2.active
 
@@ -55,6 +55,8 @@ for file in FileList:
     offj=offj+5
     wb2.save(str(filename1))
 
+os.chdir('..')
+os.chdir('..')
 #add mos results
 wb2 = xl.load_workbook(filename1)
 ws2 = wb2.active
@@ -62,10 +64,10 @@ for v in range(5,160,5):
     for i in range(16, 28):
         for j in range(1, 5):
             ws2.cell(row=i,column=v+j).value = ws2.cell(row=i,column=j).value
-wb2.save('C:\\Users\\leona\\Desktop\\no-one-is-a-group\\Fig5_6\\data_flow\\data\\final_results_with_mos.xlsx')
+wb2.save('.\\data\\final_results_with_mos.xlsx')
 
 #calculate difference respect to mos
-wb2 = xl.load_workbook('C:\\Users\\leona\\Desktop\\no-one-is-a-group\\Fig5_6\\data_flow\\data\\final_results_with_mos.xlsx')
+wb2 = xl.load_workbook('.\\data\\final_results_with_mos.xlsx')
 ws2 = wb2.active
 for i in range(1,13):
     for j in range(1,160):
@@ -73,4 +75,4 @@ for i in range(1,13):
             ws2.cell(row=i+30,column=j).value = abs(float(ws2.cell(row=i+15,column=j).value))-abs(float(ws2.cell(row=i,column=j).value))
         except:
             print('empty cell or not convertible cell')
-wb2.save('C:\\Users\\leona\\Desktop\\no-one-is-a-group\\Fig5_6\\data_flow\\data\\final_results_with_mos_and_difference.xlsx')
+wb2.save('.\\data\\final_results_with_mos_and_difference.xlsx')

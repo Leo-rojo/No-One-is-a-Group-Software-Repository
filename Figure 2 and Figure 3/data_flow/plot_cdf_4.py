@@ -6,7 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 modelli=['Exponential','Linear Rebuffering','Linear Utility','IIR filter','MPC','Bola','SDNDASH','SQI','P1203','VideoATLAS','KSQI']
-wb1 = openpyxl.load_workbook('C:\\Users\\leona\\Desktop\\no-one-is-a-group\\Fig5_6\\data_flow\\data\\final_results_with_mos_and_difference.xlsx')
+wb1 = openpyxl.load_workbook('.\\data\\final_results_with_mos_and_difference.xlsx')
 ws=wb1.active
 
 ##no diff ma valori reali
@@ -54,7 +54,7 @@ for i in contain11plcc:
     plt.xlabel('PCC',fontsize=15,fontweight='bold')
     plt.ylabel('Fraction of users',fontsize=15,fontweight='bold')
     count+=1
-fig1.savefig("C:\\Users\\leona\\Desktop\\no-one-is-a-group\\Fig5_6\\data_flow\\data\\plots\\plcc_hdtv.pdf", bbox_inches='tight')
+fig1.savefig(".\\data\\plots\\plcc_hdtv.pdf", bbox_inches='tight')
 
 fig2 = plt.figure(figsize=(6,3.2))
 
@@ -72,7 +72,7 @@ for i in contain11srcc:
     plt.xlabel('SRCC', fontsize=15, fontweight='bold')
     plt.ylabel('Fraction of users', fontsize=15, fontweight='bold')
     count += 1
-fig2.savefig("C:\\Users\\leona\\Desktop\\no-one-is-a-group\\Fig5_6\\data_flow\\data\\plots\\srcc_hdtv.pdf", bbox_inches='tight')
+fig2.savefig(".\\data\\plots\\srcc_hdtv.pdf", bbox_inches='tight')
 
 fig3 = plt.figure(figsize=(6,3.2))
 count=0
@@ -89,7 +89,7 @@ for i in contain11krcc:
     plt.xlabel('KRCC', fontsize=15, fontweight='bold')
     plt.ylabel('Fraction of users', fontsize=15, fontweight='bold')
     count += 1
-fig3.savefig("C:\\Users\\leona\\Desktop\\no-one-is-a-group\\Fig5_6\\data_flow\\data\\plots\\krcc_hdtv.pdf", bbox_inches='tight')
+fig3.savefig(".\\data\\plots\\krcc_hdtv.pdf", bbox_inches='tight')
 plt.show()
 
 
@@ -136,7 +136,7 @@ for i in diffcontain11plcc:
     plt.xlabel('PCC magnitude difference', fontsize=15, fontweight='bold')
     plt.ylabel('Fraction of users', fontsize=15, fontweight='bold')
     count += 1
-fig1.savefig("C:\\Users\\leona\\Desktop\\no-one-is-a-group\\Fig5_6\\data_flow\\data\\plots\\diffplcc_hdtv.pdf", bbox_inches='tight')
+fig1.savefig(".\\data\\plots\\diffplcc_hdtv.pdf", bbox_inches='tight')
 
 count=0
 fig2 = plt.figure(figsize=(6,3.2))
@@ -152,7 +152,7 @@ for i in diffcontain11srcc:
     plt.xlabel('SRCC magnitude difference', fontsize=15, fontweight='bold')
     plt.ylabel('Fraction of users', fontsize=15, fontweight='bold')
     count+=1
-fig2.savefig("C:\\Users\\leona\\Desktop\\no-one-is-a-group\\Fig5_6\\data_flow\\data\\plots\\diffsrcc_hdtv.pdf", bbox_inches='tight')
+fig2.savefig(".\\data\\plots\\diffsrcc_hdtv.pdf", bbox_inches='tight')
 
 count=0
 fig3=plt.figure(figsize=(6,3.2))
@@ -169,4 +169,4 @@ for i in diffcontain11krcc:
     plt.ylabel('Fraction of users', fontsize=15, fontweight='bold')
     count += 1
 plt.show()
-fig3.savefig("C:\\Users\\leona\\Desktop\\no-one-is-a-group\\Fig5_6\\data_flow\\data\\plots\\diffkrcc_hdtv.pdf", bbox_inches='tight')
+fig3.savefig(".\\data\\plots\\diffkrcc_hdtv.pdf", bbox_inches='tight')
