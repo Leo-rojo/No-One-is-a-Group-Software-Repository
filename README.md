@@ -11,6 +11,5 @@ In `requirements.txt` are listed the additional libraries needed to run the pyth
 ## Description
 The project is organized in folders called "Figure x" where x represents the figure/figures of paper that you want to reproduce. Inside each folder further information are provided.
 
-The main webpage of paper "A Quality-of-Experience Database for Adaptive Video Streaming" is https://ece.uwaterloo.ca/~zduanmu/waterloosqoe4/, here is possible to download the original dataset and provides
-a link to the github folder of their code.
+Original [Database](http://ivc.uwaterloo.ca/database/WaterlooSQoE-IV/waterloo_sqoe4_feature.zip) is provided in folder `Waterloo Streaming QoE Database IV`
 
