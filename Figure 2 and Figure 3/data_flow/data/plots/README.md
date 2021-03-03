@@ -1,0 +1,1 @@
+Folder that contains results of script `plot_cdf_4.py`
