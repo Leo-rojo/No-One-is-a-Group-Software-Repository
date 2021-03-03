@@ -8,7 +8,7 @@ from matplotlib import pyplot as plt
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
 
-for round in range(15):
+for round in range(3):
     #load dataset
     data = pd.read_csv("users_data_regression.csv")
     data = shuffle(data)#,random_state=0)
@@ -117,7 +117,7 @@ for round in range(15):
                         usrsvrmse = mean_absolute_error(y_val_u, data_y_pred_u_svr)
                         paramusr.append(usrsvrmse)
                 mantainparfold.append(paramusr)
-                print('fold interna: {}'.format(contafoldint))
+                print('inner fold: {}'.format(contafoldint))
 
             # find best one in all media delle cv interne
             mantainaveusr = np.mean(mantainparfold, axis=0)
@@ -208,10 +208,10 @@ for round in range(15):
     fig1, ax1 = plt.subplots()
     us=[]
     for i in hdtvordereduser:
-        us.append("user "+str(i))
+        us.append("u"+str(i))
     _X = np.arange(len(us))
-    ax1.bar(_X - 0.2, sorteddifflin, color='b', width=0.4)
-    ax1.bar(_X + 0.2, sorteddiff,color='r',width=0.4)
+    ax1.bar(_X - 0.2,sorteddifflin,yerr=np.array(sorteddmosstdlin)+np.array(sorteddusrstdlin), color='b', width=0.4)
+    ax1.bar(_X + 0.2,sorteddiff,yerr=np.array(sorteddmosstd)+np.array(sorteddusrstd),color='r',width=0.4)
     plt.xticks(_X, us) # set labels manually
     plt.show()
     plt.savefig('fig'+str(round)+'.png')
@@ -237,11 +237,11 @@ for round in range(15):
     #plt.show()
 
 
-    # save date for each round
-    contalista=0
-    for selectedlist in [sorteddiff,sorteddifflin,sorteddmosave,sorteddmosstd,sorteddmosavelin,sorteddmosstdlin,sorteddusrave,sorteddusrstd,sorteddusravelin,sorteddusrstdlin]:
-        with open(str(round)+'result list'+str(contalista)+'.txt', 'w') as f:
-            for item in selectedlist:
-                f.write("%s\n" % item)
-        contalista = contalista + 1
+    # # save log date for each round
+    # contalista=0
+    # for selectedlist in [sorteddiff,sorteddifflin,sorteddmosave,sorteddmosstd,sorteddmosavelin,sorteddmosstdlin,sorteddusrave,sorteddusrstd,sorteddusravelin,sorteddusrstdlin]:
+    #     with open(str(round)+'result list'+str(contalista)+'.txt', 'w') as f:
+    #         for item in selectedlist:
+    #             f.write("%s\n" % item)
+    #     contalista = contalista + 1
 

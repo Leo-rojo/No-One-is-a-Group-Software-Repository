@@ -28,10 +28,10 @@ In all the code an absolute path to data is used, so it is needed a modification
 performance results will be in `MYKSQI\results\WaterlooSQoE-IV`. Copy the performance data in `data_flow\data\final_results.xlsx` from row 16 (example is already provided).
 
 * step 2 ("individual and mos difference performance"):
-	* run `data_input_1.py` Results will be added to `data_flow\data\dataout`
-	* run `run_models_2.py` Results will be added to `data_flow\data\resultsmixture`
-	* run `aggregate_result_3.py` Results can be found in `data_flow\data\final_results_with_mos_and_difference.xlsx`
-	* run `plot_cdf_4.py` Plots can be found in `data_flow\data\plots`
+	* run `python data_input_1.py` Results will be added to `data_flow\data\dataout`
+	* run `python run_models_2.py` Results will be added to `data_flow\data\resultsmixture`
+	* run `python aggregate_result_3.py` Results can be found in `data_flow\data\final_results_with_mos_and_difference.xlsx`
+	* run `python plot_cdf_4.py` Plots can be found in `data_flow\data\plots`
 
 
 
