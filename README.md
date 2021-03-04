@@ -1,4 +1,4 @@
-# No One is a Group: Towards Optimal Video-Streaming Experience of the Individual
+# No One is a Group: Software Repository
 This repository contains the code reproducing the analysis in the paper "No One is a Group: Towards Optimal Video-Streaming Experience of the Individual"
 
 The set-up is composed by:
