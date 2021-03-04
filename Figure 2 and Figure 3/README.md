@@ -18,8 +18,6 @@
 
 
 ### Replicate the plots
-In all the code an absolute path to data is used, so it is needed a modification by changing the paths variables in accordance to your set-up.
-
 * step 1 ("hdtv mos performance"):
 	* put original dataset in `MYKSQI\data\WaterlooSQoE-IV` with only hdtv users info (example can be already found in the folder)
 	* run the original code with command:
